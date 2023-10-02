@@ -58,7 +58,7 @@ public class Main {
                                     Pessoa.barco.add(Pessoa.ladoPosTravessia.get(escolhaPessoa));
                                     Pessoa.ladoPosTravessia.remove(Pessoa.ladoPosTravessia.get(escolhaPessoa));
                                 } else {
-                                    throw new IndiceEscolhidoInvalido();
+                                    throw new IndiceEscolhidoInvalidoException();
                                 }
                             }
                         }
@@ -66,7 +66,7 @@ public class Main {
                             throw new BarcoCheioException();
                         }
 
-                    }catch (IndiceEscolhidoInvalido | BarcoCheioException e){
+                    }catch (IndiceEscolhidoInvalidoException | BarcoCheioException e){
                         System.err.println(e.getMessage());
                     }
                 }
@@ -87,10 +87,10 @@ public class Main {
                                 }
                                 Pessoa.barco.remove(Pessoa.barco.get(escolhaPessoa));
                             } else {
-                                throw new IndiceEscolhidoInvalido();
+                                throw new IndiceEscolhidoInvalidoException();
                             }
                         }
-                    }catch (IndiceEscolhidoInvalido | SemCondutorException e){
+                    }catch (IndiceEscolhidoInvalidoException | SemCondutorException e){
                         System.err.println(e.getMessage());
                     }
                 }
