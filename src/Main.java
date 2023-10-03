@@ -144,6 +144,7 @@ public class Main {
                         !!!!!! VOCE VENCEU !!!!!!!
                         !!!!!!!!!!!!!!!!!!!!!!!!!!
                 """);
+                System.exit(0);
             }
         }catch (PerdeuPlayboyException e){
             System.err.println(e.getMessage()+contCanibal);
@@ -158,9 +159,5 @@ public class Main {
         Pessoa canibal = new Canibal();
         Pessoa canibal2 = new Canibal();
         Pessoa canibal3 = new Canibal();
-    }
-
-    private static void levarPessoa(Pessoa pessoa) {
-
     }
 }
